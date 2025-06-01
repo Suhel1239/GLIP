@@ -11,7 +11,7 @@ MODEL:
 
   LANGUAGE_BACKBONE:
     FREEZE: False
-    MODEL_TYPE: "bert-base-uncased" # "roberta-base", "clip"
+    MODEL_TYPE: "clip" # "bert-base-uncased" ,"roberta-base", "clip"
     MASK_SPECIAL: False
 
   RPN:
@@ -56,8 +56,8 @@ TEST:
 
 # use for grounding model
 DATASETS:
-  TRAIN: ("object365_dt_train", )
-  TEST: ("coco_2017_val", )
+  TRAIN: ("acupoint_train", )
+  TEST: ("acupoint_val", )
   DISABLE_SHUFFLE: False
   ADD_DET_PROMPT: False
   RANDOM_SAMPLE_NEG: 85
