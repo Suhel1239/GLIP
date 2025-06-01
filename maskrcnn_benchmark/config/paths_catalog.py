@@ -30,6 +30,21 @@ def try_to_find(file, return_dir=False, search_path=['./DATASET', './OUTPUT', '.
 class DatasetCatalog(object):
     DATASETS = {
         # pretrained grounding dataset
+        "acupoint_train": {
+            "img_folder" : "/kaggle/input/tcm-iitd-2500/train",
+            "ann_file": "/kaggle/input/tcm-iitd-2500/train/_annotations.coco.json",
+            "is_train" : True
+        } ,
+        "acupoint_val": {
+            "img_folder": "/kaggle/input/tcm-iitd-2500/valid",
+            "ann_file": "/kaggle/input/tcm-iitd-2500/valid/_annotations.coco.json",
+            "is_train": False
+        } ,
+        "acupoint_test" : {
+            "img_folder": "/kaggle/input/tcm-iitd-2500/test",
+            "ann_file": "/kaggle/input/tcm-iitd-2500/test/_annotations.coco.json",
+            "is_train": False
+            },
         # mixed vg and coco
         "mixed_train": {
             "coco_img_dir": "coco/train2014",
